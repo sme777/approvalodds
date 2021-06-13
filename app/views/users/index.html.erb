@@ -11,6 +11,7 @@
   <h1>Welcome to Approal Odds</h1>
   <% if logged_in?%>
     <h2>Howdy <%= current_user.name %></h2>
+    <a href="signout">Sign Out</a>
   <% else %>
     <form id="registrationForm" class="registerForm" action="/signup" method="POST">
       <div class="register-calasa">
