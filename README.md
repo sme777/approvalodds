@@ -1,24 +1,7 @@
-# README
+# Approval Odds
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+We provide your approval odds for any number of credit cards
 
-Things you may want to cover:
+### For Developers
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+When working locally, make a branch first. Work only on that branch and when you are ready, push to your branch on github, and after, make a pull request. DO NOT merge without peer review of your code.
