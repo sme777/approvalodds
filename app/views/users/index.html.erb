@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Approval Odds</title>
+  
+    <%= stylesheet_link_tag 'application', media: 'all' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+  <body>
+  <h1>Welcome to Approal Odds</h1>
+  <% if logged_in?%>
+    <h2>Howdy <%= current_user.name %></h2>
+  <% else %>
+    <form id="registrationForm" class="registerForm" action="/signup" method="POST">
+      <div class="register-calasa">
+        
+      </div>
+      <input type="hidden" name="authenticity_token" value="<%=form_authenticity_token%>">
+      <div class="mb-3">
+          <label for="nameField" class="labelField form-label">Full Name</label>
+          <div class="input-group has-validation">
+              <input type="text" class="inputField w-100 form-control" id="nameField" aria-describedby="emailHelp" placeholder="John Doe" name="user[name]">
+          </div>
+      </div>
+
+      <div class="mb-3">
+          <label for="emailField" class="labelField form-label">Email address</label>
+          <div class="input-group has-validation">
+              <input type="email" class="inputField w-100 form-control" id="emailField" aria-describedby="emailHelp" placeholder="john@berkeley.edu" name="user[email]">
+          </div>
+      </div>
+      <div class="mb-3">
+          <label for="passwordField" class="labelField form-label">Password</label>
+          <div class="input-group has-validation">
+              <input type="password" class="inputField w-100 form-control" id="passwordField" placeholder="please use a reasonbaly long password" name="user[password]">
+          </div>
+      </div>
+      <div class="mb-3">
+          <label for="confirmField" class="labelField form-label">Confirm Password</label>
+          <div class="input-group has-validation">
+              <input type="password" class="inputField w-100 form-control" id="confirmField" placeholder="not that long to forget" name="user[confirm_password]">
+          </div>
+      </div>
+
+      <button id="signupSubmit" type="submit" class="w-100 btn btn-lg btn-custom-dark">Register</button>
+
+    </form>
+  <% end %>
+
+
+  </body>
+</html>
+
+<!-- <p id="notice"><%= notice %></p>
+
+<h1>Users</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @users.each do |user| %>
+      <tr>
+        <td><%= user.name %></td>
+        <td><%= user.email %></td>
+        <td><%= link_to 'Show', user %></td>
+        <td><%= link_to 'Edit', edit_user_path(user) %></td>
+        <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New User', new_user_path %> -->
